@@ -32,7 +32,7 @@ public class AboutjejuServiceImp implements AboutjejuService {
 		String category="LM";
 		Map<String, Object> map=mav.getModel();
 		AboutjejuDto aboutjejuDto = (AboutjejuDto) map.get("aboutjejuDto");
-		//img 단
+		//img 단ㅋ
 		ImgDto imgDto =(ImgDto) map.get("ImgDto");
 		MultipartHttpServletRequest request = (MultipartHttpServletRequest) map.get("request");
 		MultipartFile upFile =request.getFile("file");
@@ -46,7 +46,7 @@ public class AboutjejuServiceImp implements AboutjejuService {
 			String Iname=upFile.getOriginalFilename()+aboutjejuDto.getLMnumber();
 			long Isize=upFile.getSize();
 			LogAspect.logger.info(LogAspect.LogMsg+Iname+","+Isize);
-			//확인해야함
+			// 경로 확인해야함
 			File path = new File("/img");
 			path.mkdir();
 			
