@@ -17,7 +17,7 @@ public class LogAspect {
 		
 		try {
 			
-			logger.info(LogMsg +  joinPoint.getTarget().getClass().getName() + "\t\t" + joinPoint.getSignature().getName());
+			//logger.info(LogMsg +  joinPoint.getTarget().getClass().getName() + "\t\t" + joinPoint.getSignature().getName());
 			
 			obj=joinPoint.proceed();
 			

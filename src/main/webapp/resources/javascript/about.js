@@ -13,4 +13,7 @@ function wirte(obj,root) {
 		return false;
 	}
 }
-
+function LMForm(obj,root){
+	var LMtitle = document.forms[0].title.value;
+	
+}

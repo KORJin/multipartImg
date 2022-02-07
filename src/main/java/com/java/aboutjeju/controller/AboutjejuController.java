@@ -12,41 +12,72 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.java.aboutjeju.dto.AboutjejuDto;
 import com.java.aboutjeju.service.AboutjejuService;
-
 @Controller
 public class AboutjejuController {
 	@Autowired
 	private AboutjejuService aboutjejuService;
 	
 	@RequestMapping(value="/aboutjeju/write.do", method = RequestMethod.GET)
-	public ModelAndView write(HttpServletRequest request,HttpServletResponse response) {
-		return new ModelAndView("aboutjeju/write");
-	}
+	 public ModelAndView write(HttpServletRequest request,HttpServletResponse response) { return new ModelAndView("aboutjeju/write"); }
+	 
+	/*
+	 * @RequestMapping(value="/aboutjeju/write.do", method = RequestMethod.GET)
+	 * public ModelAndView imgDelete(HttpServletRequest request,HttpServletResponse
+	 * response) { String iname=request.getParameter("Iname"); ModelAndView mav =
+	 * new ModelAndView(); mav.addObject("Iname",iname);
+	 * 
+	 * return new ModelAndView("aboutjeju/write"); }
+	 */
 	@RequestMapping(value="/aboutjeju/writeOk.do", method = RequestMethod.POST)
 	public ModelAndView writeOk(HttpServletRequest request,HttpServletResponse response,AboutjejuDto aboutjejuDto) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("request",request);
 		mav.addObject("aboutjejuDto", aboutjejuDto);
-		aboutjejuService.writeOk(mav);
+
+		aboutjejuService.writeOK(mav);
+		
 		return mav;
 	}
 	@RequestMapping(value="/aboutjeju/introduction.do", method = RequestMethod.GET)
-	public ModelAndView aboutjejuIntroduction(HttpServletRequest request,HttpServletResponse response) {
-		return new ModelAndView("aboutjeju/introduction");
+	public ModelAndView Introductionread(HttpServletRequest request,HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("request",request);
+		aboutjejuService.Iread(mav);
+		//return new ModelAndView("aboutjeju/introduction");
+		return mav;
 	}
 	
 	@RequestMapping(value="/aboutjeju/location.do", method = RequestMethod.GET)
-	public ModelAndView aboutjejuLocation(HttpServletRequest request,HttpServletResponse response) {
-		return new ModelAndView("aboutjeju/location");
+	public ModelAndView Locationread(HttpServletRequest request,HttpServletResponse response) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("request",request);
+
+		aboutjejuService.Lread(mav);
+		//return new ModelAndView("aboutjeju/location");
+		return mav;
 	}
 	
 	@RequestMapping(value="/aboutjeju/speciality.do", method = RequestMethod.GET)
-	public ModelAndView aboutjejuSpeciality(HttpServletRequest request,HttpServletResponse response) {
-		return new ModelAndView("aboutjeju/speciality");
+	public ModelAndView Specialityread(HttpServletRequest request,HttpServletResponse response,AboutjejuDto aboutjejuDto) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("request",request);
+		mav.addObject("response",response);
+		mav.addObject("aboutjejuDto", aboutjejuDto);
+
+		aboutjejuService.Sread(mav);
+		//return new ModelAndView("aboutjeju/speciality");
+		return mav;
 	}
 	
-	@RequestMapping(value="/aboutjeju/activities.do", method = RequestMethod.GET)
-	public ModelAndView aboutjejuactivities(HttpServletRequest request,HttpServletResponse response) {
-		return new ModelAndView("aboutjeju/activities");
+	@RequestMapping(value="/aboutjeju/activites.do", method = RequestMethod.GET)
+	public ModelAndView activitiesread(HttpServletRequest request,HttpServletResponse response,AboutjejuDto aboutjejuDto) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("request",request);
+		mav.addObject("response",response);
+		mav.addObject("aboutjejuDto", aboutjejuDto);
+
+		aboutjejuService.Aread(mav);
+		return new ModelAndView("aboutjeju/activites");
+		//return mav;
 	}
 }

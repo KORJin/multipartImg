@@ -23,45 +23,40 @@
             </div>
             <div id="content">
                 <div style="border : 2px black solid; width: 1175px; height: 640px; margin-top: 40px;margin-left: 40px; overflow: hidden; position: relative;">
-					<!-- 3개묶음 아래 사진들 -->
 					<div style="float: left;">
 						<div id="imgsize">
-							<img id="secimg" alt="" src=""/>
-							<input name="sectext" style="width:149px;height:30px;"/>
+							<img id="secimg" alt="" src="${root}/img/${Ilist[0].iname}"/>
+							<a id="sectext" style="width:149px;height:30px;">${Ilist[0].lMtitle}</a>
 						</div>
 						<div id="imgsize" >
-							<img id="thimg" alt="" src=""/>
-							<input name="thtext" style="width:149px;height:30px;"/>
+							<img id="thimg" alt="" src="${root}/img/${Ilist[1].iname}"/>
+							<a id="thtext" style="width:149px;height:30px;">${Ilist[1].lMtitle}</a>
 						</div>
 						<div id="imgsize" >
-							<img id="forimg" alt="" src=""/>
-							<input name="fortext" style="width:149px;height:30px;"/>
+							<img id="forimg" alt="" src="${root}/img/${Ilist[2].iname}"/>
+							<a id="fortext" style="width:149px;height:30px;">${Ilist[2].lMtitle}</a>
 						</div>
 					</div>
 					<!-- 3개묶음 아래 사진들 -->
 					<div style="position: absolute; margin-top: 250px">
 						<div id="imgsize">
-							<img id="secimg" alt="" src=""/>
-							<input name="fatext" style="width:149px;height:30px;"/>
+							<img id="secimg" alt="" src="${root}/img/${Ilist[3].iname}"/>
+							<a id="fatext" style="width:149px;height:30px;">${Ilist[3].lMtitle}</a>
 						</div>
 						<div id="imgsize" >
-							<img id="thimg" alt="" src=""/>
-							<input name="sixtext" style="width:149px;height:30px;"/>
+							<img id="thimg" alt="" src="${root}/img/${Ilist[4].iname}"/>
+							<a id="sixtext" style="width:149px;height:30px;">${Ilist[4].lMtitle}</a>
 						</div>
 						<div id="imgsize" >
-							<img id="forimg" alt="" src=""/>
-							<input name="sentext" style="width:149px;height:30px;"/>
+							<img id="forimg" alt="" src="${root}/img/${Ilist[5].iname}"/>
+							<a id="sentext" style="width:149px;height:30px;">${Ilist[5].lMtitle}</a>
 						</div>
 					</div>
 					<!-- 오른쪽 큰 사진 -->
 					<div style="border : 1px black solid; width: 590px; height: 590px; margin-top: 20px;margin-right: 20px; float: right;">
-						<img id="mainimg" alt="" src=""/>
+						<img id="mainimg" alt="" src="${root}/img/${Ilist[6].iname}"/>
 					</div>
-                </div>
-                <div id="but">
-                    <input type="submit" value="입력"/>
-                    <input type="reset" value="취소"/>
-                </div>
+					</div>
             </div>
         </div>
     </div>

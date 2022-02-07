@@ -27,41 +27,28 @@
                 	
                 		<!-- 왼쪽 사진 -->
                 		<div style="padding-top: 50px; margin-top: 20px;">
-                			<a>대충 길이를 측정하는 글 대충 길이를 측정하는 글 대충 길이를 측정하는 글 대충 길이를</a>
-                			<img width="110px" height="110px" alt="" src="https://blog.jinbo.net/attach/615/200937431.jpg"/>
-                			<img width="110px" height="110px" alt="" src="https://blog.jinbo.net/attach/615/200937431.jpg"/>
+                			<img width="150px" height="150px" alt="" src="${root}/img/${Ilist[0].iname" onclick="btnClick(${Ilist}, 0)"/>
+                			<a id="sectext" style="width:149px;height:30px;">${Ilist[0].lMtitle}</a>
                 		</div>
                 		
                 		<!-- 가운데 큰 사진 -->
                 		<div style="border : 0px black solid; width: 651px; height: 450px; padding: 10px; margin-top: 30px;">
-                			<img width="600px" height="400px" alt="" src="https://blog.jinbo.net/attach/615/200937431.jpg"/>
+                			<img width="600px" height="400px" alt="" src="${root}/img/${Ilist[1].iname" onclick="btnClick(${Ilist}, 1)"/>
                 		</div>
                 		
                 		<!-- 오른쪽 사진 -->
                 		<div>
-                			<img width="110px" height="110px" alt="" src="https://blog.jinbo.net/attach/615/200937431.jpg"/>
-                			<img width="110px" height="110px" alt="" src="https://blog.jinbo.net/attach/615/200937431.jpg"/>
-                			<a>대충 길이를 측정하는 글 대충 길이를 측정하는 글 대충 길이를 측정하는 글 대충 길이를 측정하는</a>
+                			<img width="150px" height="150px" alt="" src="${root}/img/${Ilist[2].iname" onclick="btnClick(${Ilist}, 2)"/>
+                			<a id="thtext" style="width:149px;height:30px;">${Ilist[2].lMtitle}</a>
                 		</div>
                 	</div>
                 	
-                	
-                	
                 	<!-- 맨 아래 사진 -->
                 	<div id="con2">	
-                		<img width="110px" height="110px" alt="" src="https://blog.jinbo.net/attach/615/200937431.jpg"/>
-                		<img width="110px" height="110px" alt="" src="https://blog.jinbo.net/attach/615/200937431.jpg"/>
-                		<a>대충 길이를 측정하는 글 대충 길이를 측정하는 글 대충 길이를 측정하는 글 대충 길이를 측정하는 글 대충 길이를 측정하는 글</a>
-						
+                		<img width="145px" height="145px" alt="" src="${root}/img/${Ilist[3].iname" onclick="btnClick(${Ilist}, 3)"/>
+                		<a id="fortext" style="width:149px;height:30px; margin-right: 10px;">${Ilist[3].lMtitle}</a>
                 	</div>
                 </div>
-                
-                
-                <div id="but">
-                    <input type="submit" value="입력"/>
-                    <input type="reset" value="취소"/>
-                </div>
-            </div>
         </div>
     </div>
 </body>

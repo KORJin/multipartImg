@@ -13,14 +13,14 @@
 	<c:if test="${check > 0}">
 		<script type="text/javascript">
 			alert("글 작성이 완료 되었습니다.");
-			location.href = "${root}/write.js";
+			location.href = "${root}/aboutjeju/write.do";
 		</script>
 	</c:if>
 
 	<c:if test="${check == 0}">
 		<script type="text/javascript">
 			alert("글 작성이 되지 않았습니다.");
-			location.href = "${root}/fileboard/write.do";
+			location.href = "${root}/aboutjeju/write.do";
 		</script>
 	</c:if>
 </body>
